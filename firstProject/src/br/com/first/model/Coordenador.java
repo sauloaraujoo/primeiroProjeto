@@ -2,16 +2,16 @@ package br.com.first.model;
 
 import java.math.BigDecimal;
 
-public class Professor extends Pessoa {
+public class Coordenador extends Pessoa {
 	
 	private Long id;
 	private BigDecimal salario;
-	private Titulacao titulacao;
+	private String curso;
 	
-	public Professor(String nome, String cpf, Endereco endereco, Contato contato, BigDecimal salario, Titulacao titulacao) {
+	public Coordenador(String nome, String cpf, Endereco endereco, Contato contato, BigDecimal salario, String curso) {
 		super(nome, cpf, endereco, contato);
 		this.salario = salario;
-		this.titulacao = titulacao;
+		this.curso = curso;
 	}
 
 	public Long getId() {
@@ -30,12 +30,12 @@ public class Professor extends Pessoa {
 		this.salario = salario;
 	}
 
-	public Titulacao getTitulacao() {
-		return titulacao;
+	public String getCurso() {
+		return curso;
 	}
 
-	public void setTitulacao(Titulacao titulacao) {
-		this.titulacao = titulacao;
+	public void setCurso(String curso) {
+		this.curso = curso;
 	}
 	
 }
